@@ -1,0 +1,52 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<script>
+	function submitForm()
+	{
+		
+		var obj = document.getElementById("role");
+		if(obj.value=="admin")
+			document.location.href="adm_index.html";
+		else if(obj.value=="service")
+			document.location.href="ser_index.html";
+		else
+			document.location.href="user_index.html";
+	}
+</script>
+</HEAD>
+
+<BODY>
+<form name="form" method="post">
+<TABLE align="center">
+<TR>
+	<TD>用户名：</TD>
+	<TD><input name="userName"/></TD>
+</TR>
+<TR>
+	<TD>密码：</TD>
+	<TD><input name="pwd"/></TD>
+</TR>
+<TR>
+	<TD>用户类型：</TD>
+	<TD>
+		<SELECT NAME="role" id="role">
+			<option value="admin">管理员</option>
+			<option value="service">服务人员</option>
+			<option value="user">普通客户</option>
+		</SELECT>
+	</TD>
+</TR>
+<TR>
+	<td><td>
+	<TD><img src="images/submitOK.gif" onclick="submitForm()"/></TD>
+</TR>
+</TABLE>
+</form>
+</BODY>
+</HTML>

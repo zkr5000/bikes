@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<SCRIPT language=javascript>
+        function selectbox(indexbox)
+        {
+            parent.right.location.href = indexbox;
+        }
+    </SCRIPT>
+    <SCRIPT language=javascript src="js/dtree/dtree.js"></SCRIPT>
+    <script type="text/javascript" src="js/java-like.util.js"></script>
+    <link rel="stylesheet" href="js/dtree/dtree.css" type="text/css">
+</HEAD>
+
+<BODY>
+<form action="" name="form1" method=POST>
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+            <td rowspan="5" width="1" bgcolor="CCCCCC"></td>
+            <td bgcolor="CCCCCC" height="1"></td>
+            <td rowspan="4" bgcolor="CCCCCC" width="1"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="E3E7FF" align="center" height="5"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="CCCCCC" height="1"></td>
+        </tr>
+
+        <tr>
+            <td bgcolor="F9F9F9" align="center" valign="top">
+                <table width="90%" border="0" align="center" cellpadding="1" cellspacing="1" bgcolor="F5F5F5">
+                    <tr bgcolor="F3F9FF">
+                        <td bgcolor="F5F5F5">
+                            <SCRIPT LANGUAGE="JavaScript">
+                                d = new dTree('d');
+                                d.config.target = "right";
+                                d.config.imageDir = 'js/dtree/img';
+                                d.reSetImagePath();
+                                d.config.folderLinks = false;
+                                d.config.closeSameLevel = true;
+                                var isOpen ;
+                                //根节点
+                                d.add(0, -1, '自行车租赁管理系统');
+                                d.add(1, 0, '用户管理');
+                                d.add(2, 0, '客户管理');
+								d.add(3, 0, '自行车管理');
+                               
+
+                                d.add(6, 1, '添加用户', '/users/addUser.jsp', '', 'right');
+                                d.add(7, 1, '查询用户', 'ShowUsersServlet', '', 'right');
+
+                                d.add(8, 2, '添加客户信息', 'customers/addCustomer.jsp', '', 'right');
+                                d.add(9, 2, '查询客户信息', 'ShowAllCustomerServlet', '', 'right');
+
+								d.add(10, 3, '添加自行车信息', 'bike/addBike.jsp', '', 'right');
+								d.add(11, 3, '查询自行车信息', 'ShowBikesServlet', '', 'right');
+
+
+
+                                document.write(d);
+                            </script>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td background="images/jao1.gif" colspan="2" align="right"><img
+                    src="images/jao.gif" width="8" height="8"></td>
+        </tr>
+
+    </table>
+</form>
+</BODY>
+</HTML>
